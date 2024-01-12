@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="calculator.js"></script>
+    <script src="calculator.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <div><input type="text" value="12345"></div>
+        <div><input id="display" type="text" value="0"></div>
         <div class="buttonscontainer">
-            <div class="'numbers">
+            <div class="numbers">
                 <div><button id="7">7</button><button id="8">8</button><button id="9">9</button></div>
-                <div><button id=" 4">4</button><button id="5">5</button><button id="6">6</button></div>
+                <div><button id="4">4</button><button id="5">5</button><button id="6">6</button></div>
                 <div><button id="1">1</button><button id="2">2</button><button id="3">3</button></div>
-                <div><button id="0">0</button><button id=".">.</button><button id="=">=</button></div>
+                <div><button id="0">0</button><button id="dot">.</button></div>
             </div>
             <div class="operators">
                 <button id="+">+</button>
                 <button id="-">-</button>
                 <button id="x">x</button>
                 <button id="/">/</button>
+                <button id="=">=</button>
+                
             </div>
+            <button id="C">C</button>
         </div>
+        <!--For testing only-->
+        <div id="first"></div><div id="op"></div><div id="second"></div>
     </div>
+    
 </body>
 </html>
