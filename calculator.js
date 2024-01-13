@@ -36,7 +36,13 @@ const generateEventListeners = () => {
     const numButtons = numbers.querySelectorAll('button');
     numButtons.forEach(button => {
         button.addEventListener('click',(event) => {
-            writeNumInDisplay(event.currentTarget.textContent);
+            if (event.currentTarget.textContent === '.'){
+                if ((!firstNumber.includes('.') && operator === '') || (operator !== '' && !secondNumber.includes('.'))){
+                    writeNumInDisplay(event.currentTarget.textContent);
+                }
+            } else {
+                writeNumInDisplay(event.currentTarget.textContent);
+            }
         }, false);
     });
     
@@ -47,6 +53,14 @@ const generateEventListeners = () => {
         firstNumber = '';
         secondNumber = '';
         operator = '';
+        updateTestValues();
+    })
+
+    const backspace = document.querySelector('#backspace');
+    backspace.addEventListener('click', () => {
+        const display = document.querySelector('#display');
+        let value = display.value
+        display.value = value.substring(0, value.length - 1);
         updateTestValues();
     })
 

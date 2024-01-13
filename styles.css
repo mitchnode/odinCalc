@@ -1,6 +1,16 @@
+body {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
 .container {
     display: flex;
     flex-direction: column;
+    background-color: grey;
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    border: 1px black solid;
 }
 .container input {
     width: 200px;
@@ -12,9 +22,20 @@
     margin: 5px;
     
 }
-.operators {
+.operators,.controls{
     display: flex;
     flex-direction: column;
+}
+.operators button {
+    background-color: lightblue;
+}
+
+#C {
+    background-color: rgb(219, 63, 63);
+}
+
+#backspace {
+    background-color: chocolate;
 }
 
 .buttonscontainer button {
