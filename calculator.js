@@ -7,10 +7,10 @@ let firstNumber = '';
 let secondNumber = '';
 let operator = '';
 
-// For testing only
-const first = document.querySelector('#first');
-const op = document.querySelector('#op');
-const second = document.querySelector('#second');
+// // For testing only
+// const first = document.querySelector('#first');
+// const op = document.querySelector('#op');
+// const second = document.querySelector('#second');
 
 const operate = (operator,firstNumber,secondNumber) => {
     switch(operator){
@@ -53,14 +53,12 @@ const generateEventListeners = () => {
         firstNumber = '';
         secondNumber = '';
         operator = '';
-        updateTestValues();
+        //updateTestValues();
     })
 
     const backspace = document.querySelector('#backspace');
     backspace.addEventListener('click', () => {
         const display = document.querySelector('#display');
-        //let value = display.value
-        //display.value = value.substring(0, value.length - 1);
         if (secondNumber !== ''){
             secondNumber = secondNumber.substring(0, secondNumber.length - 1);
         } else if (operator !== ''){
@@ -68,9 +66,8 @@ const generateEventListeners = () => {
         } else if (firstNumber !== ''){
             firstNumber = firstNumber.substring(0, firstNumber.length - 1);
         }
-        //display.value = value.substring(0, value.length - 1);
         display.value = firstNumber + ' ' + operator + ' ' + secondNumber;
-        updateTestValues();
+        //updateTestValues();
     })
 
     const operatorsContainer = document.querySelector('.operators');
@@ -96,7 +93,7 @@ const writeOperatorInDisplay = (input) => {
     }
     operator = input;
     display.value = firstNumber + ' ' + operator;
-    updateTestValues();
+    //updateTestValues();
 }
 
 const writeNumInDisplay = (input) => {
@@ -115,14 +112,14 @@ const writeNumInDisplay = (input) => {
         }
     }
     display.value = firstNumber + ' ' + operator + ' ' + secondNumber;
-    updateTestValues();
+    //updateTestValues();
 }
 
-const updateTestValues = () => {
-    first.textContent = firstNumber;
-    second.textContent = secondNumber;
-    op.textContent = operator;
-}
+// const updateTestValues = () => {
+//     first.textContent = firstNumber;
+//     second.textContent = secondNumber;
+//     op.textContent = operator;
+// }
 
 const equals = () => {
     if (firstNumber !== '' && operator !== '' && secondNumber !== ''){
@@ -136,7 +133,7 @@ const equals = () => {
         }
         secondNumber = '';
         operator = '';
-        updateTestValues();
+        //updateTestValues();
         
     }
     
