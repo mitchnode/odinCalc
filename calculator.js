@@ -59,8 +59,17 @@ const generateEventListeners = () => {
     const backspace = document.querySelector('#backspace');
     backspace.addEventListener('click', () => {
         const display = document.querySelector('#display');
-        let value = display.value
-        display.value = value.substring(0, value.length - 1);
+        //let value = display.value
+        //display.value = value.substring(0, value.length - 1);
+        if (secondNumber !== ''){
+            secondNumber = secondNumber.substring(0, secondNumber.length - 1);
+        } else if (operator !== ''){
+            operator = operator.substring(0, operator.length - 1);
+        } else if (firstNumber !== ''){
+            firstNumber = firstNumber.substring(0, firstNumber.length - 1);
+        }
+        //display.value = value.substring(0, value.length - 1);
+        display.value = firstNumber + ' ' + operator + ' ' + secondNumber;
         updateTestValues();
     })
 

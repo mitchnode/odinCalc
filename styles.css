@@ -11,10 +11,11 @@ body {
     width: 260px;
     border-radius: 10px;
     border: 1px black solid;
+    justify-content: center;
 }
 .container input {
-    width: 200px;
-    height: 20px;
+    width: 245px;
+    height: 20px;    
     padding: 5px;
 }
 .buttonscontainer {
